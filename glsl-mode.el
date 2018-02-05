@@ -125,6 +125,7 @@
 
 (defcustom glsl-man-pages-base-url "http://www.opengl.org/sdk/docs/man/html/"
   "Location of GL man pages"
+  :type '(string)
   :group 'glsl)
 
 ;;;###autoload

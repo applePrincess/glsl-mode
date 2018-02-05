@@ -132,7 +132,10 @@
   (add-to-list 'auto-mode-alist '("\\.vert\\'" . glsl-mode))
   (add-to-list 'auto-mode-alist '("\\.frag\\'" . glsl-mode))
   (add-to-list 'auto-mode-alist '("\\.geom\\'" . glsl-mode))
-  (add-to-list 'auto-mode-alist '("\\.glsl\\'" . glsl-mode)))
+  (add-to-list 'auto-mode-alist '("\\.glsl\\'" . glsl-mode))
+  (add-to-list 'auto-mode-alist '("\\.tesc\\'" . glsl-mode))
+  (add-to-list 'auto-mode-alist '("\\.tese\\'" . glsl-mode))
+  (add-to-list 'auto-mode-alist '("\\.comp\\'" . glsl-mode)))
 
 (eval-and-compile
   ;;
@@ -291,6 +294,9 @@
 (defvar glsl-other-file-alist
   '(("\\.frag$" (".vert"))
     ("\\.vert$" (".frag"))
+    ("\\.tesc$" (".tesc"))
+    ("\\.tese$" (".tese"))
+    ("\\.comp$" (".comp"))
     )
   "Alist of extensions to find given the current file's extension")
 
